@@ -13,6 +13,7 @@ RUN npm run build
 #Layer 2
 FROM nginx
 COPY --from=builder /app/build /usr/share/nginx/html
+#We dont have to start the nginx because the default setting is to start it up
 
 
 
